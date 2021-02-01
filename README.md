@@ -1,0 +1,2 @@
+# LabyrinthtoDomination
+Idle game
