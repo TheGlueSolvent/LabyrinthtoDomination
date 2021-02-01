@@ -6,3 +6,4 @@ var gameData = {
 function BegForMoney() {
   gameData.Money += gameData.MoneyPerClick;
 }
+document.getElementById("Money begged").innerHTML = gameData.money + " Money begged";
