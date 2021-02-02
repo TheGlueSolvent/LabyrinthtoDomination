@@ -1,9 +1,21 @@
 var gameData = {
-  Money: 0,
-  MoneyPerClick: 0.1
+  Money: 1,
+  MoneyPerClick: 1,
+  MoneyPerClickCost: 10
 };
 
-function BegForMoney() {
+function FindMoney() {
   gameData.Money += gameData.MoneyPerClick;
+  document.getElementById("MoneyFound").innerHTML = gameData.Money + " Money Found";
 }
-document.getElementById("Money begged").innerHTML = gameData.money + " Money begged";
+
+function FindMoneyPerClick() {
+  if (gameData.Money >= gameData.MoneyPerClickCost) {
+    gameData.Money -= gameData.MoneyPerClickCost;
+    gameData.MoneyPerClick += 1;
+    gameData.MoneyPerClickCost *= 2;
+    document.getElementById("MoneyFound").innerHTML = gameData.Money + " Money Found";
+    document.getElementById("perClickUpgrade").innerHTML = "Upgrade Finding (Currently Level " + gameData.MoneyPerClick + ") Cost: " + gameData.MoneyPerClickCost + " Money";
+  }
+}
+
