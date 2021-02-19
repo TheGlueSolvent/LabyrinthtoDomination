@@ -2,3 +2,10 @@
 body {
  background-color:DarkGray ; 
 }
+button {
+  font-size:  10px;
+  }
+.Money{
+  background-color:DarkGreen ;
+  color: LightGreen ;
+}
