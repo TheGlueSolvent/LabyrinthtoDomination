@@ -1,4 +1,3 @@
-
 var gameData = {
   Money: 0,
   MoneyPerClick: 1,
