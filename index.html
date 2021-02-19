@@ -2,15 +2,17 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-      <link rel="stylesheet" href="style.css">
     <title>LabyrinthToDoom</title>
   </head>
   <body>
     <p id="MoneyFound">0 Money</p>
-       <button onclick="FindMoney()">Find Money</button>
-    <button onclick="FindMoneyPerClick()" id="perClickUpgrade">Upgrade Finding (Adds 1 Money Per Click) (Current MoneyPerClick: ) Cost: 10 Money</button> 
-    <button onclick="FindAreaPerClick()" id="perAreaUpgrade">Upgrade Area Radius (Multiplies Money Per Click by 2)  (Current MoneyPerClick:) Cost: 100 Money</button>
+       <button onclick="FindMoney()"class="Money" id="Money">Find Money</button>
+    <button onclick="FindMoneyPerClick()" class="Money" id="perClickUpgrade" >Upgrade Finding (Adds 1 Money Per Click) (Current MoneyPerClick: ) Cost: 10 Money</button> 
+    <button onclick="FindAreaPerClick()" class="Money" id="perAreaUpgrade">Upgrade Area Radius (Multiplies Money Per Click by 2)  (Current MoneyPerClick:) Cost: 100 Money</button>
+    <button onclick="FindHelperPerClick()" class="Money" id="perHelperUpgrade">Upgrade Helpers Radius (Increase  Money Per Click Exponent by 1)  (Current MoneyPerClick:) (button doesnt work rn) Cost: 100000 Money</button>
     <script src="main.js" charset="utf-8" type="text/javascript"></script>
   </body>
 </html>
+
+
 
