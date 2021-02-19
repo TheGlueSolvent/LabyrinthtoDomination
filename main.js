@@ -3,7 +3,15 @@ var gameData = {
   MoneyPerClick: 1,
   MoneyPerClickCost: 10,
   MoneyPerAreaCost: 100,
-};
+}
+var saveGameLoop = window.setInterval(function() {
+  localStorage.setItem("LabyrinthToDominationSave", JSON.stringify(gameData))
+}, 15000)
+
+ var savegame = JSON.parse(localStorage.getItem("LabyrinthToDominationSave"))
+if (savegame !== null) {
+  gameData = savegame
+}
 
 function FindMoney() {
   gameData.Money += gameData.MoneyPerClick;
