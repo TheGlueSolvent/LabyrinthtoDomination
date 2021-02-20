@@ -8,4 +8,6 @@ button {
 .Money{
   background-color:DarkGreen ;
   color: LightGreen ;
+  display:none ;
 }
+
