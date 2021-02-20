@@ -40,8 +40,8 @@ function FindMoneyPerClick() {
 function FindHelperPerClick () {
   if (gameData.Money >= gameData.MoneyPerHelperCost) {
     gameData.Money -= gameData.MoneyPerHelperCost;
-    gameData.MoneyPerClick += 2;
-    gameData.MoneyPerHelperCost *= 30;
+    gameData.MoneyPerClick **= 2;
+    gameData.MoneyPerHelperCost **= 3;
     document.getElementById("MoneyFound").innerHTML = gameData.Money + " Money Found";
   document.getElementById("perHelperUpgrade").innerHTML = "Upgrade Helpers  (Increase  Money Per Click Exponent by 1)  (Current MoneyPerClick:) Cost: 100 Money: " + gameData.MoneyPerClick + ") Cost: " + gameData.MoneyPerHelperCost + " Money";
    }
