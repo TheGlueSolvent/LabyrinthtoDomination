@@ -3,6 +3,7 @@ var gameData = {
   MoneyPerClick: 1,
   MoneyPerClickCost: 10,
   MoneyPerAreaCost: 100,
+  MoneyPerHelperCost: 100,
 }
 var saveGameLoop = window.setInterval(function() {
   localStorage.setItem("LabyrinthToDominationSave", JSON.stringify(gameData))
@@ -36,3 +37,27 @@ function FindMoneyPerClick() {
     document.getElementById("perAreaUpgrade").innerHTML = "Upgrade Area Radius (Multiplies Money Per Click by 2) (Current MoneyPerClick: " + gameData.MoneyPerClick + ") Cost: " + gameData.MoneyPerAreaCost + " Money";
    }
 }
+function FindHelperPerClick () {
+  if (gameData.Money >= gameData.MoneyPerHelperCost) {
+    gameData.Money -= gameData.MoneyPerHelperCost;
+    gameData.MoneyPerClick += 2;
+    gameData.MoneyPerHelperCost *= 30;
+    document.getElementById("MoneyFound").innerHTML = gameData.Money + " Money Found";
+  document.getElementById("perHelperUpgrade").innerHTML = "Upgrade Helpers  (Increase  Money Per Click Exponent by 1)  (Current MoneyPerClick:) Cost: 100 Money: " + gameData.MoneyPerClick + ") Cost: " + gameData.MoneyPerHelperCost + " Money";
+   }
+}
+if(gameData.Money>=0) {
+  document.getElementById("Money").style.display= "inline-block"
+}
+
+if(gameData.Money >= 5) {
+    document.getElementById("perClickUpgrade").style.display = "inline-block" 
+  }
+if(gameData.Money >= 50) {
+    document.getElementById("perAreaUpgrade").style.display = "inline-block" 
+      if(gameData.Money >= 50000) {
+    document.getElementById("perHelperUpgrade").style.display = "inline-block" 
+  }
+      } 
+  
+
