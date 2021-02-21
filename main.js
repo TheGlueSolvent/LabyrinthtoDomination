@@ -55,9 +55,11 @@ if(gameData.Money >= 5) {
   }
 if(gameData.Money >= 50) {
     document.getElementById("perAreaUpgrade").style.display = "inline-block" 
-      if(gameData.Money >= 50000) {
+}
+  if(gameData.Money >= 50000) {
     document.getElementById("perHelperUpgrade").style.display = "inline-block" 
-  }
+  
       } 
+ 
   
 
